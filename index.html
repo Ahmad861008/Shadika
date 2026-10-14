@@ -6,6 +6,7 @@
 <section id="dashboard" class="hidden"><div class="card"><div class="row"><h2 id="profile">حساب من</h2><span id="badge" class="badge"></span></div><p id="number" class="muted"></p></div><div class="card"><h3>ساخت گروه یا کانال</h3><input id="title" maxlength="60" placeholder="نام گروه یا کانال"><div class="row"><button data-type="group">ساخت گروه</button><button data-type="channel">ساخت کانال</button></div><p class="muted">در این نسخه هر گروه یا کانال فقط برای سازنده قابل دسترسی است تا مدیریت عضویت امن اضافه شود.</p></div><h3>گفتگوهای من</h3><div id="list"></div></section>
 <section id="chat" class="hidden"><div class="row"><button id="back">بازگشت</button><h3 id="chatTitle"></h3></div><div id="messages" class="messages"></div><div class="row"><input id="message" maxlength="4000" placeholder="پیام بنویس..."><button id="send">ارسال</button></div></section>
 </main><script type="module">
+  import { getAuth, onAuthStateChanged, signInWithPhoneNumber, signOut, RecaptchaVerifier } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js';
 import {getAuth,RecaptchaVerifier,signInWithPhoneNumber,onAuthStateChanged,signOut} from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js';
 import {getFirestore,doc,getDoc,setDoc,collection,addDoc,query,where,orderBy,limit,onSnapshot,serverTimestamp} from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js';
