@@ -8,10 +8,16 @@
 </main><script type="module">
   import { getAuth, onAuthStateChanged, signInWithPhoneNumber, signOut, RecaptchaVerifier } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js';
-import {getAuth,RecaptchaVerifier,signInWithPhoneNumber,onAuthStateChanged,signOut} from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js';
 import {getFirestore,doc,getDoc,setDoc,collection,addDoc,query,where,orderBy,limit,onSnapshot,serverTimestamp} from 'https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js';
 // تنظیمات پروژه خودت را از Firebase Console وارد کن.
-const firebaseConfig={apiKey:'YOUR_API_KEY',authDomain:'YOUR_PROJECT.firebaseapp.com',projectId:'YOUR_PROJECT_ID',appId:'YOUR_APP_ID',messagingSenderId:'YOUR_SENDER_ID'};
+const firebaseConfig = {
+  apiKey: "AIzaSyDF3_-Zm5N-vTTYf8USh3a4IREL_pGQo_E",
+  authDomain: "shadika-e2031.firebaseapp.com",
+  projectId: "shadika-e2031",
+  storageBucket: "shadika-e2031.firebasestorage.app",
+  messagingSenderId: "294639834149",
+  appId: "1:294639834149:web:7f3e704bef52da2cf29bcc"
+};
 // UID مالک واقعی را بعد از اولین ورود از Firebase Authentication بگیر.
 const OWNER_UID='YOUR_OWNER_UID';
 const $=id=>document.getElementById(id);let auth,db,user,confirmation,recaptcha,stopChats,stopMessages,activeChat,chats=[];
